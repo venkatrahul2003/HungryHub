@@ -124,17 +124,17 @@ const Home = () => {
 
       <footer className="bg-secondary py-20 mt-32">
         <div className="container text-center text-gray-400">
-          <div className="text-4xl font-black text-white mb-6">Canteen.</div>
+          <div className="text-4xl font-black text-white mb-6">HungryHub.</div>
           <p className="max-w-xl mx-auto mb-10 text-lg leading-relaxed">
-            Modern food delivery solution for our campus. Fresh, fast, and always delicious.
+            The ultimate food delivery solution for our campus. Fresh, fast, and always delicious.
           </p>
           <div className="flex justify-center gap-10 mb-10 text-white font-bold text-lg">
             <span className="cursor-pointer hover:text-primary transition-colors">Twitter</span>
             <span className="cursor-pointer hover:text-primary transition-colors">Instagram</span>
-            <span className="cursor-pointer hover:text-primary transition-colors">Facebook</span>
+            <span className="cursor-pointer hover:text-primary transition-colors">Linkedin</span>
           </div>
           <p className="text-sm border-t border-white/10 pt-10 font-medium">
-            © 2024 Canteen Management. Built with React and Spring Boot.
+            © 2026 HungryHub Campus Eats. Built with React and Spring Boot.
           </p>
         </div>
       </footer>

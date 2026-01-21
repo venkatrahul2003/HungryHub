@@ -11,7 +11,7 @@ const Navbar = ({ cartCount, onOpenCart }) => {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
 
         <Link to="/" className="text-3xl font-extrabold text-primary tracking-tighter cursor-pointer no-underline">
-          Canteen<span className="text-secondary">.</span>
+          HungryHub<span className="text-secondary">.</span>
         </Link>
 
         <div className="flex items-center gap-6">
