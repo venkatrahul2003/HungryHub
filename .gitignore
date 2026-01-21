@@ -1,0 +1,17 @@
+# General
+.DS_Store
+*.log
+
+# Frontend
+canteen-frontend/node_modules
+canteen-frontend/dist
+canteen-frontend/.env
+
+# Backend
+canteen-backend/.gradle
+canteen-backend/build
+canteen-backend/bin
+canteen-backend/.settings
+canteen-backend/.project
+canteen-backend/.classpath
+canteen-backend/.factorypath
