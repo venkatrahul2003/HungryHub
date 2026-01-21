@@ -8,7 +8,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Payment from './pages/Payment';
 import { motion } from 'framer-motion';
-import axios from 'axios';
+import api from './api';
 import { CartProvider, useCart } from './context/CartContext';
 import { AuthProvider } from './context/AuthContext';
 
@@ -32,7 +32,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:8080/api/menu')
+    api.get('/api/menu')
       .then(res => {
         if (res.data.length > 0) setMenu(res.data);
       })

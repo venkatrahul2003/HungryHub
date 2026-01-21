@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../api';
 import { motion } from 'framer-motion';
 import { ClipboardList, Clock, CheckCircle2, ChevronRight, ShoppingBag } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
@@ -12,7 +12,7 @@ const Orders = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const res = await axios.get('http://localhost:8080/api/orders');
+                const res = await api.get('/api/orders');
                 // Filter orders by current user name for simplicity in this demo demo
                 const userOrders = res.data.filter(o => o.customerName === user?.name).reverse();
                 setOrders(userOrders);

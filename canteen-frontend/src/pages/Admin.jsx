@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../api';
 import { motion } from 'framer-motion';
 import { Package, Plus, LogOut, LayoutDashboard, Utensils, ClipboardList } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -20,10 +20,10 @@ const Admin = () => {
         setLoading(true);
         try {
             if (activeTab === 'orders') {
-                const res = await axios.get('http://localhost:8080/api/orders');
+                const res = await api.get('/api/orders');
                 setOrders(res.data);
             } else if (activeTab === 'menu') {
-                const res = await axios.get('http://localhost:8080/api/menu');
+                const res = await api.get('/api/menu');
                 setMenuItems(res.data);
             }
         } catch (err) {
@@ -35,7 +35,7 @@ const Admin = () => {
     const handleAddItem = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:8080/api/menu', newItem);
+            await api.post('/api/menu', newItem);
             alert('Item added successfully!');
             setNewItem({ name: '', price: '', category: '', description: '', imageUrl: '', rating: 4.5 });
             fetchData();

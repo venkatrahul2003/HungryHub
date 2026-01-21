@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { CreditCard, CheckCircle2, ShieldCheck, Lock, ArrowRight, Smartphone, Building2, Wallet } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
-import axios from 'axios';
+import api from '../api';
 import { useAuth } from '../context/AuthContext';
 
 const Payment = () => {
@@ -74,7 +74,7 @@ const Payment = () => {
                 transactionRef: ref || 'LOCAL-SHORTCUT'
             };
 
-            await axios.post('http://localhost:8080/api/orders', orderData);
+            await api.post('/api/orders', orderData);
             setStatus('success');
             clearCart();
             setTimeout(() => navigate('/orders'), 3000);
@@ -107,7 +107,7 @@ const Payment = () => {
                 status: 'PAID'
             };
 
-            await axios.post('http://localhost:8080/api/orders', orderData);
+            await api.post('/api/orders', orderData);
 
             setStatus('success');
             clearCart();
