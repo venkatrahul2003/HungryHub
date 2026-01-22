@@ -1,4 +1,12 @@
-FROM eclipse-temurin:17-jdk-alpine
+# Build stage
+FROM eclipse-temurin:20-jdk-alpine AS build
+WORKDIR /app
+COPY . .
+RUN ./gradlew build -x test
+
+# Runtime stage
+FROM eclipse-temurin:20-jdk-alpine
 VOLUME /tmp
-COPY build/libs/*.jar app.jar
+COPY --from=build /app/build/libs/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
+
