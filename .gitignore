@@ -15,3 +15,5 @@ canteen-backend/.settings
 canteen-backend/.project
 canteen-backend/.classpath
 canteen-backend/.factorypath
+canteen-backend/.env
+
