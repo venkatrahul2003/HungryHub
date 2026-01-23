@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics - Links and Images</title>
+</head>
+
+<body>
+
+    <!-- 
+        LINKS (Hyperlinks):
+        The <a> tag (anchor) is used to link to other pages.
+        The 'href' attribute specifies the destination URL.
+    -->
+    <h2>Links</h2>
+
+    <!-- External link -->
+    <p><a href="https://www.google.com">Go to Google</a></p>
+
+    <!-- 
+        Target attribute: 
+        _blank opens the link in a new tab.
+        _self (default) opens in the same tab.
+    -->
+    <p><a href="https://www.wikipedia.org" target="_blank">Open Wikipedia in a new Tab</a></p>
+
+    <!-- Link to an internal file -->
+    <p><a href="01_introduction.html">Back to Introduction</a></p>
+
+    <!-- Email link -->
+    <p><a href="mailto:someone@example.com">Send an Email</a></p>
+
+    <hr>
+
+    <!-- 
+        IMAGES:
+        The <img> tag is empty, it contains attributes only and does not have a closing tag.
+        'src' = Source URL of the image.
+        'alt' = Alternative text (essential for accessibility and if the image fails to load).
+        'width' and 'height' can be used to set dimensions.
+    -->
+    <h2>Images</h2>
+
+    <p>Loading an image from a URL:</p>
+    <img src="https://via.placeholder.com/150" alt="A grey placeholder image" width="150" height="150">
+
+    <!-- 
+        IMAGE AS A LINK:
+        You can wrap an <img> tag inside an <a> tag to make the image clickable.
+    -->
+    <p>Click the image to go to Google:</p>
+    <a href="https://www.google.com">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo"
+            width="100">
+    </a>
+
+</body>
+
+</html>

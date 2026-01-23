@@ -1,6 +1,9 @@
 # 🍔 CampusCraze - The Ultimate Canteen Experience 🚀
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://hungry-k1za90c5v-venkatrahul2003s-projects.vercel.app/)
+
 Welcome to **CampusCraze**, a state-of-the-art, full-stack canteen management system designed to revolutionize how students interact with their campus kitchen. Inspired by the convenience of Swiggy and Zomato, CampusCraze brings premium design and real-time functionality to your fingertips.
+
 
 ## 🌟 Key Features
 
